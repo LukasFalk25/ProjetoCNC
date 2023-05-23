@@ -1,3 +1,13 @@
+const express = require("express");
+const app = express();
+
+app.listen(4000, () => {
+    console.log('listening to port 4000');
+})
+
+
+
+
 //objeto literal
 const material = {
     "p": {
@@ -29,7 +39,3 @@ class Material {
         return [n, vf];
     }
 }
-
-const test = new Material(10, 4);
-
-console.log(test.CalculaAv("m"))

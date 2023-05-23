@@ -14,17 +14,18 @@
     <h3>Aqui você consegue calcular a Rotação (N)<br>
     e a Taxa de Avanço (FZ)</h3>
     
-    <form class="form-container" action="">
+    <form class="form-container" action="post">
         <label>
             Insira o diâmetro da ferramenta:
-            <input type="number" id="diametro-ferramenta">
+            <input type="number" id="diametro-ferramenta" required>
         </label>
 
         <label>
             Insira o número de arestas:
-            <input type="number" id="numero-arestas">
+            <input type="number" id="numero-arestas" required>
         </label>
-    </form>
+        <button type="submit">Submit</button>
+    </form> 
     </div>
 </body>
 </html>
