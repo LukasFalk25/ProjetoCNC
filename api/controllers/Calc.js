@@ -1,4 +1,3 @@
-
 //objeto literal
 const mat = {
     "p": {
@@ -15,13 +14,12 @@ const mat = {
 const controllerCalculo = (req, res) => {
     const { diametro, nArestas, material } = req.body;
 
-    const vc = mat[material].vc;
-    const fz = mat[material].fz;
+    const { vc, fz } = mat[material];
 
     const n = Math.round(vc * 1000 / (3.14 * diametro));
     const vf = Math.round(n * fz * nArestas);
 
-    res.json({n, vf})
+    res.json({n, vf});
 }
 
 module.exports = controllerCalculo;
